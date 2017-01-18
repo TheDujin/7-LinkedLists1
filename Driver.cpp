@@ -2,9 +2,11 @@
 #include "Node.h"
 #include <iostream>
 
+using namespace std;
+
 int main() {
-  Student* a = new Student(5);
-  Student* b = new Student(49);
+  Student* a = new Student(5, "Bob", "Joe");
+  Student* b = new Student(49, "Bill", "Jones");
   Node* x = new Node(a);
   Node* y = new Node(b);
   x->setNext(y);

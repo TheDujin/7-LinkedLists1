@@ -1,16 +1,23 @@
-#include <iostream>
-#include "Student.h"
+//Josh Howell Node
+//Nodes that organize themselves for a linked list that will be
+//used for a student list
+
 using namespace std;
 
-class Node {
+class Student;
+
+class Node{ 
  public:
-  Node(Student* newData);
-  Node* getNext();
-  Student* getStudent();
-  void setNext(Node* newNext);
+  Node(Student* student);
   ~Node();
-  
- private:
-  Student* data;
-  Node* next;
+  Node* getNext(); //returns the next node 
+  Student* getStudent(); //returns the student the node points to
+  void setNext(Node* node); //sets the pointer to the next node
+  void push_back(Student* student); //adds a new node to the end of the list that the current node is in
+  Node* end(); 
+  void wipe();
+ protected:
+    Student* data;
+    Node* pointer;
 };
+      
