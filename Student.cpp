@@ -3,10 +3,11 @@
 
 using namespace std;
 
-Student::Student(int newID, char* newFirstName, char* newLastName) {
+Student::Student(int newID, char* newFirstName, char* newLastName, float newGPA) {
   ID = newID;
   firstName = newFirstName;
   lastName = newLastName;
+  GPA = newGPA;
 }
 
 int Student::getID() {
@@ -19,6 +20,14 @@ char* Student::getFirstName() {
 
 char* Student::getLastName() {
   return lastName;
+}
+
+float Student::getGPA() {
+  return GPA;
+}
+
+void Student::print() {
+  cout << firstName << " " << lastName << ", ID: " << ID << ", GPA: " << GPA << endl;
 }
 
 Student::~Student() {
