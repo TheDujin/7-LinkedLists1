@@ -6,8 +6,7 @@ using namespace std;
 
 class Student;
 
-class Node {
-  
+class Node{ 
  public:
   Node(Student* student);
   ~Node();
